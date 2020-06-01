@@ -35,8 +35,10 @@ public class JavaExample
 
       for (int i = 0; i < 10000; i++) {
         // Build a sample event to send; make sure we use a current date
+        DateTime dateTime = new DateTime();
+        System.out.println(dateTime);
         final Map<String, Object> obj = ImmutableMap.<String, Object>of(
-            "timestamp", new DateTime().toString(),
+            "timestamp", dateTime.toString(),
             "page", "foo",
             "added", i
         );
